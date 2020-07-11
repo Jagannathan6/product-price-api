@@ -1,0 +1,8 @@
+spring:
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/contentdv
+      options:
+        readPreference: Primary
+  jackson:
+    property-naming-stratergy: SNAKE_CASE
