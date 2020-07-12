@@ -57,5 +57,17 @@ public class PriceResourceTest {
         assertTrue(StringUtils.isNotBlank(response.getProductId()));
     }
 
+    @Test
+    public void testAddPricingWithError() {
+        when(priceService.addPrice("abcdefgh", TestDataUtils.getPriceRequestWithError()))
+                .thenReturn(Mono.just(TestDataUtils.getPriceResponse()));
+        FluxExchangeResult<String> productResponse = webClient.post()
+                .uri("/v1/products/abcdefgh/prices")
+                .body(Mono.just(TestDataUtils.getPriceRequestWithError()), PriceRequest.class)
+                .exchange()
+                .expectStatus().is4xxClientError().returnResult(String.class);
+    }
+
+
 
 }

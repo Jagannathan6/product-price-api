@@ -19,6 +19,12 @@ public class TestDataUtils {
                .build();
     }
 
+    public static PriceRequest getPriceRequestWithError() {
+        return PriceRequest.builder()
+                .range("1-2")
+                .build();
+    }
+
     public static PriceResponse getPriceResponse() {
         return PriceResponse.builder()
                 .productId(productId)

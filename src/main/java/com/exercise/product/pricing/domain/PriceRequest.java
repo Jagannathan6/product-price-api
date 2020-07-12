@@ -4,6 +4,9 @@ import com.fasterxml.jackson.databind.PropertyNamingStrategy;
 import com.fasterxml.jackson.databind.annotation.JsonNaming;
 import lombok.*;
 
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
+
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
@@ -14,8 +17,10 @@ public class PriceRequest {
 
     String range;
 
-    float minPrice;
+    @NotNull(message = "Minimum Price is mandatory")
+    Float minPrice;
 
-    float maxPrice;
+    @NotNull(message = "Maximum Price is mandatory")
+    Float maxPrice;
 
 }
