@@ -1,6 +1,6 @@
 package com.exercise.product.pricing.domain;
 
-import com.exercise.product.pricing.ProductConstants;
+import com.exercise.product.pricing.constants.ProductConstants;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.PropertyNamingStrategy;

@@ -1,4 +1,4 @@
-package com.exercise.product.pricing;
+package com.exercise.product.pricing.constants;
 
 public interface ProductConstants {
 

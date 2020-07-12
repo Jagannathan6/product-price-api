@@ -1,6 +1,6 @@
 package com.exercise.product.pricing.entity;
 
-import com.exercise.product.pricing.ProductConstants;
+import com.exercise.product.pricing.constants.ProductConstants;
 import com.exercise.product.pricing.domain.MetaFields;
 import com.exercise.product.pricing.domain.Workflow;
 import com.fasterxml.jackson.annotation.JsonFormat;
